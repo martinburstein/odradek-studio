@@ -1,0 +1,120 @@
+{
+  "name": "odradek-studio",
+  "productName": "Odradek Studio",
+  "version": "0.5.5",
+  "private": true,
+  "description": "Desktop RoArm workbench with a 3D replica, offline stylus learning and synchronized iteration ghosts.",
+  "author": "Martin Burstein",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "verify:sources": "node scripts/verify-sources.mjs",
+    "build:viewer": "vite build",
+    "prepare:electron": "node node_modules/electron/install.js",
+    "prepare:runtime": "node scripts/prepare-runtime.mjs",
+    "prepare:controller": "npm ci --prefix apps/waveshare-robotic-arm --omit=dev",
+    "prepare:app": "npm run verify:sources && npm run verify:public && npm run build:viewer && npm run prepare:runtime && npm run prepare:electron && npm run prepare:controller",
+    "start": "electron .",
+    "test": "node --test test/*.test.mjs apps/bot-crossing/test/arm-manual.test.mjs apps/bot-crossing/test/roarm-model.test.mjs apps/bot-crossing/test/roarm-preview.test.mjs apps/waveshare-robotic-arm/test/joint-preview-bridge.test.mjs apps/waveshare-robotic-arm/test/point-map-capture.test.mjs apps/waveshare-robotic-arm/test/preset-studio.test.mjs apps/waveshare-robotic-arm/test/studio-workspace.test.mjs apps/waveshare-robotic-arm/test/studio-embedding.test.mjs apps/waveshare-robotic-arm/test/manual-console-session.test.mjs",
+    "dist:win": "npm run prepare:app && electron-builder --win nsis zip --x64 --publish never",
+    "dist:unpacked": "npm run prepare:app && electron-builder --win dir --x64 --publish never",
+    "verify:public": "node scripts/verify-public.mjs"
+  },
+  "devDependencies": {
+    "electron": "45.3.2",
+    "electron-builder": "26.18.0",
+    "fake-indexeddb": "6.2.8",
+    "happy-dom": "21.0.4",
+    "three": "0.185.0",
+    "vite": "7.3.8"
+  },
+  "build": {
+    "appId": "com.odradek.studio",
+    "productName": "Odradek Studio",
+    "asar": true,
+    "npmRebuild": false,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "desktop/main.cjs",
+      "desktop/learning-save.cjs",
+      "desktop/supervisor.cjs",
+      "desktop/service-restart.cjs",
+      "desktop/workspace.cjs",
+      "desktop/preload.cjs",
+      "desktop/studio-preload.cjs",
+      "assets/theme/neon.css",
+      "assets/theme/workspaces.json",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "desktop/backend.mjs",
+        "to": "backend/backend.mjs"
+      },
+      {
+        "from": "desktop/preview-server.mjs",
+        "to": "backend/preview-server.mjs"
+      },
+      {
+        "from": "apps/waveshare-robotic-arm",
+        "to": "apps/waveshare-robotic-arm",
+        "filter": [
+          "**/*",
+          "!**/runtime/**/*"
+        ]
+      },
+      {
+        "from": "apps/waveshare-robotic-arm/node_modules",
+        "to": "apps/waveshare-robotic-arm/node_modules",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "dist",
+        "to": "viewer"
+      },
+      {
+        "from": "vendor/node",
+        "to": "node"
+      },
+      {
+        "from": "THIRD-PARTY-NOTICES.md",
+        "to": "THIRD-PARTY-NOTICES.md"
+      },
+      {
+        "from": "apps/bot-crossing/LICENSE",
+        "to": "licenses/Bot-Crossing-LICENSE.txt"
+      },
+      {
+        "from": "provenance.json",
+        "to": "provenance.json"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ],
+      "signExecutable": false,
+      "icon": "assets/app/odradek.ico"
+    },
+    "artifactName": "odradek-studio-${version}-${arch}.${ext}",
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "include": "desktop/installer.nsh",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Odradek Studio",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

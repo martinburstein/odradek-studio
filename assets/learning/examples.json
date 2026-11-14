@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "examples": [
+    {
+      "file": "stylus-corner-after-v2.json",
+      "bytes": 557377,
+      "sha256": "91943059ab8a2a5918b73f3a67e90d9a3c614a1063930412fb7aaf262525cfab",
+      "formatVersion": 2,
+      "generations": 800,
+      "snapshots": 244,
+      "physicalValidation": false
+    },
+    {
+      "file": "stylus-corner-before-v1.json",
+      "bytes": 558453,
+      "sha256": "5d46c111749bff76752fb95e8f1950563d66a3c9a09a47a8d5efe7d822a70c9a",
+      "formatVersion": 1,
+      "generations": 800,
+      "snapshots": 244,
+      "physicalValidation": false
+    },
+    {
+      "file": "stylus-example-v1.json",
+      "bytes": 214804,
+      "sha256": "f6b7d6d1ee6fad915e6ebf9140075146af8ad8dabfa5cbd659b18bf211eb1e45",
+      "formatVersion": 1,
+      "generations": 800,
+      "snapshots": 82,
+      "physicalValidation": false
+    },
+    {
+      "file": "stylus-mount4-exploration-v2.json",
+      "bytes": 556929,
+      "sha256": "29b0c99c46aa55cefa7b31999fb7ac5eaed8b333fdff1eeeb88814dd422352fc",
+      "formatVersion": 2,
+      "generations": 800,
+      "snapshots": 244,
+      "physicalValidation": false
+    }
+  ]
+}

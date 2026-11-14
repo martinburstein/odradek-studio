@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "RoArm-M2 Check-in",
+  "short_name": "RoArm Check-in",
+  "description": "Private, authenticated RoArm-M2 status and control check-in.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101018",
+  "theme_color": "#101018",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

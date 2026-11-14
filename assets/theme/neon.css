@@ -1,0 +1,53 @@
+/* One shared console skin for the renderer, Studio and its existing controls. */
+:root{--amber:#ff9d2e!important;--cyan:#ffb76b!important;--orange:#ff7a00!important;--hot:#ff7a00!important;--bright:#ffc06a!important;--green:#8ee6a8!important;--red:#ff654b!important;--muted:#b79579!important;--line:#63351f!important;--bg:#100b10!important;--panel:#1b1113!important;--deep:#0c080d!important;--text:#ffe0bb!important;color:#ffe0bb!important;background:#100b10!important;color-scheme:dark;font-family:Consolas,'Courier New',monospace!important}
+body{background:repeating-linear-gradient(0deg,#ffa44a03 0 1px,transparent 1px 4px),#100b10!important;color:var(--text)!important}
+:root :is(button,input,select,textarea,a,summary){font-family:Consolas,'Courier New',monospace!important;outline-offset:3px}
+:root :is(button,.file-button){border-radius:2px!important;border-color:#754124!important;background:#241513!important;color:#ffd4a5!important;box-shadow:none!important;letter-spacing:.6px}
+:root :is(button,.file-button):hover:not(:disabled){background:#482619!important;border-color:#ff9d2e!important;color:#fff0d5!important}
+:root :is(button,.file-button):focus-visible,:root :is(input,select,textarea,summary,a):focus-visible{outline:2px solid #ffc06a!important}
+:root :is(button[aria-pressed=true],button[aria-selected=true],.primary,.move,#enable){background:#ff8a1c!important;border-color:#ffb45c!important;color:#1b0b08!important;font-weight:700!important}
+:root .joint-bank button[aria-pressed=true] :is(strong,span,small){color:#1b0b08!important}
+:root :is(.stop,button.stop){color:#ffe1ba!important;border-color:#e36a40!important;background:repeating-linear-gradient(135deg,#4a1815 0 8px,#351016 8px 16px)!important;font-weight:700!important}
+:root :is(input,select,textarea,.angle-field){background:#100a0d!important;color:#ffe0bb!important;border-color:#754124!important;border-radius:2px!important;accent-color:#ff9d2e!important}
+:root input[type=checkbox]{accent-color:#ff9d2e!important}
+:root :is(h1,h2,h3,.nameplate){font-family:'Bahnschrift SemiCondensed',Bahnschrift,'Arial Narrow',sans-serif!important;text-transform:uppercase;letter-spacing:1px;color:#ffb76b!important}
+:root :is(.eyebrow,.section-label,.section-head,.bank-label,.display-label,.field-label,small,.detail,.range-label,.scope-note,.muted,.small){color:#b79579!important;font-family:Consolas,'Courier New',monospace!important}
+:root :is(.panel,.joint,.lab,.sync-panel,.camera-panel,.setup,.live-panel,.library-panel,.editor-panel,.repair-panel,.trackpad-matrix,.lab-inspector){border-color:#63351f!important;border-radius:2px!important;background:linear-gradient(120deg,#3c211622,transparent 70%),#1b1113!important;box-shadow:none!important;backdrop-filter:none!important}
+:root :is(.status-bar,.connection-strip,.command-bar,.display,.lab-readouts>div,.lab-plot,.matrix-record){background:#100a0d!important;border-color:#63351f!important;color:#e2b38d!important;box-shadow:none!important;border-radius:2px!important}
+:root :is(.target-readout,.reading strong,.lab-readouts strong,.current-line strong,.pose b){font-family:Consolas,'Courier New',monospace!important;color:#ffd0a1!important;text-shadow:none!important}
+:root :is(.current-line,.message,.setup p,.console footer,.pose,.plug p,#summary){color:#c2a084!important;border-color:#63351f!important}
+:root :is(.signal.live,.status-light.on){background:#8ee6a8!important;box-shadow:0 0 8px #8ee6a844!important}
+:root .console .dial-face{background:radial-gradient(circle at 40% 30%,#4b2c1b,#170e0c 65%)!important;border-color:#935029!important}
+:root .console .dial-ticks{background:repeating-conic-gradient(from -135deg,#aa6b3b 0deg 1deg,transparent 1deg 12deg)!important}
+:root .console .joint{padding:16px!important}:root .console .joint h2{font-size:22px!important}:root .console .joint-body{gap:10px!important}
+:root .console .setup{grid-template-columns:1fr!important}:root .console .intro::after{display:none!important}
+:root .joint-number{color:#ff7a0044!important}:root .console .dial-needle{background:#ffad4b!important}
+:root .console .joint-grid{gap:12px!important}:root .console .range-caption{font-size:8px!important}
+:root .lab-offline,:root .mode-tag,:root .camera-tag{background:#17140d!important;border-color:#7d5b28!important;color:#ffd38b!important;border-radius:1px!important}
+:root .joint-handle{background:#321b14ed!important;border-color:#ff9d2e!important;color:#ffd6a9!important}:root .joint-handle.selected{background:#ff8a1c!important;color:#1b0b08!important}
+:root #tip-position,:root #point-name{color:#ffb76b!important}:root .lock{color:#e7b981!important}
+:root .workspace-shell{background:#100b10;grid-template-rows:56px 76px minmax(0,1fr)}
+:root .workspace-nav{display:grid;grid-template-columns:126px repeat(6,minmax(0,1fr));gap:6px;padding:7px 12px;border-bottom:1px solid #9e522b!important;background:#130b10!important;overflow:auto}
+:root .workspace-brand{font-family:Bahnschrift,'Arial Narrow',sans-serif;font-size:16px;line-height:1;letter-spacing:2px;color:#ffb76b;display:block;margin:0;white-space:normal}.workspace-brand small{display:block;font:8px Consolas!important;letter-spacing:2px;margin-top:4px}
+:root .workspace-nav button{display:flex;align-items:center;justify-content:center;gap:7px;height:39px;padding:6px;font-size:11px;white-space:nowrap}.workspace-nav button small{font-size:9px!important;opacity:.65}:root .workspace-nav button[aria-pressed=true] small{color:#1b0b08!important}
+.workspace-heading{grid-column:1/-1;grid-row:2;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:9px 18px;border-bottom:1px solid #63351f;background:linear-gradient(90deg,#48201644,transparent),#160e12;min-width:0}.workspace-heading h2{font-size:22px;margin:4px 0 2px;line-height:1.1}.workspace-heading .mode-description{font-size:10px;color:#c2a084;line-height:1.4}.workspace-heading .eyebrow{font-size:8px;letter-spacing:2px}.workspace-subnav{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.workspace-subnav button{font-size:9px;padding:6px 8px;min-height:29px}
+:root .workspace-shell>.replica-lab{grid-row:3}:root .operator-dock{grid-row:3}:root .workspace-shell.with-operator{grid-template-columns:minmax(0,1.06fr) minmax(480px,1fr)}
+:root .workspace-shell.focus-operator{grid-template-columns:minmax(0,1fr)}:root .focus-operator>.replica-lab{display:none}:root .focus-operator>.operator-dock{grid-column:1;border:0}
+:root .mast{border-top:2px solid #d97634!important}:root .preview-badge{color:#ffc06a;border-color:#a46d32}.replica-lab .notice{border-left:3px solid #ff9d2e!important;color:#e9c5a0!important}
+:root .workspace-shell::after{content:'';position:fixed;bottom:0;left:0;right:0;height:3px;pointer-events:none;z-index:30;background:repeating-linear-gradient(135deg,#c87b32 0 10px,#160b0d 10px 20px)}
+/* Live tabs share one unchanged Sync document; only their presentation differs. */
+html[data-lab-view] body>main:not(.console){display:block!important;max-width:none!important;padding:0!important;margin:0!important}
+html[data-lab-view] .plugs{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+html[data-lab-view] .plug{border-color:#63351f!important;min-height:75px!important}
+html[data-lab-view] .sync-panel{margin:0!important}
+html[data-lab-view=sync] :is(.camera-panel,details.setup),html[data-lab-view=camera] :is(.sync-panel,details.setup),html[data-lab-view=safety] :is(.sync-panel,.camera-panel){display:none!important}
+html[data-lab-view=camera] .camera-panel{margin:0!important;display:flex!important;flex-direction:column;height:calc(100vh - 25px);min-height:0!important}
+html[data-lab-view=camera] .camera-stage{height:0!important;max-height:none!important;min-height:150px;aspect-ratio:auto;flex:1 1 0!important;background:#080609!important}
+html[data-lab-view=safety] details.setup{display:block!important;padding:20px!important;margin:0!important;border-top:3px solid #e8a84d!important}
+html[data-lab-view=safety] details.setup summary{font:700 20px Bahnschrift,'Arial Narrow',sans-serif!important;text-transform:uppercase;letter-spacing:1px;color:#ffb76b!important;line-height:1.5}
+html[data-lab-view=safety] .setup label{display:flex!important;align-items:flex-start;gap:12px;padding:12px;margin:7px 0!important;border:1px solid #5a341f;background:#110b0d;font:12px/1.6 Consolas,monospace!important}
+html[data-lab-view=safety] .setup input[type=checkbox]{width:18px!important;height:18px;margin:2px 0 0!important;flex-shrink:0}
+#lab-safety-actions{display:none}.lab-restart-panel{padding:18px;margin:0 0 14px;border:1px solid #99622c;background:#1b1113}.lab-restart-panel h2{font-size:22px;margin:6px 0 10px}.lab-restart-panel>.small{font-size:11px;line-height:1.6}.lab-restart-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0}.lab-restart-actions>div{border:1px solid #63351f;padding:12px;background:#100a0d}.lab-restart-actions button{width:100%;min-height:40px;font-size:11px}.lab-restart-actions p{font-size:11px;line-height:1.6;color:#c2a084;margin-top:10px}#lab-restart-status{font:11px/1.6 Consolas,monospace;padding:10px 12px;border-left:3px solid #ff9d2e;background:#100a0d;margin-bottom:12px}#lab-restart-status.error{border-color:#ff654b;color:#ffba9e}html[data-lab-view=safety] #lab-safety-actions{display:block}
+@media(max-width:700px){.lab-restart-actions{grid-template-columns:1fr;gap:8px}.lab-restart-panel{padding:12px}.lab-restart-actions>div{display:grid;grid-template-columns:minmax(150px,1fr) 1.5fr;gap:12px}.lab-restart-actions p{margin:0}}
+@media(max-width:1100px){:root .workspace-nav{grid-template-columns:repeat(6,minmax(0,1fr))}:root .workspace-brand{display:none}:root .workspace-shell.with-operator{grid-template-columns:minmax(0,1fr);grid-template-rows:56px 76px minmax(240px,40%) minmax(0,1fr)}:root .workspace-shell.with-operator>.operator-dock{grid-row:4;grid-column:1}:root .workspace-shell.focus-operator{grid-template-rows:56px 76px minmax(0,1fr)}:root .focus-operator>.operator-dock{grid-row:3!important}.workspace-heading{padding:9px 12px}.workspace-heading h2{font-size:20px}.workspace-heading .mode-description{font-size:9px}.workspace-subnav button{font-size:8px;padding:5px}.workspace-nav button{font-size:10px!important}}
+@media(max-width:580px){html[data-lab-view] .plugs{grid-template-columns:1fr!important}:root .console .joint h2{font-size:18px!important}:root .console .joint{padding:12px!important}}

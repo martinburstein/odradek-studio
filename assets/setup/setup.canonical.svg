@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Odradek Studio — illustrative desk setup</title>
+  <desc id="desc">Illustrative front schematic: RoArm on the left, a downward held stylus, Dell laptop centered on blue tape, camera on a tripod to the right aimed toward the keyboard, large curved monitor behind and a separate keyboard farther right. Positions, pose and field of view are illustrative, with measurements pending.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#294454" stroke-width=".7"/></pattern>
+    <linearGradient id="screen" x2="0" y2="1"><stop stop-color="#19333e"/><stop offset="1" stop-color="#0a141f"/></linearGradient>
+    <linearGradient id="metal" x2="1" y2="1"><stop stop-color="#b3c5cb"/><stop offset="1" stop-color="#647e8b"/></linearGradient>
+    <pattern id="keys" width="29" height="22" patternUnits="userSpaceOnUse"><rect x="2" y="2" width="24" height="17" rx="3" fill="#162733" stroke="#6c8591" stroke-width=".7"/></pattern>
+    <marker id="look" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#81dee4"/></marker>
+    <style>
+      text{font-family:Consolas,'Courier New',monospace;fill:#d9e5e9} .tiny{font-size:13px;letter-spacing:1.4px;fill:#91adbc}.label{font-size:19px;letter-spacing:1px}.sub{font-size:14px;fill:#96afbc}.amber{fill:#ffbd69}.cyan{fill:#81dee4}.leader{fill:none;stroke:#718e9e;stroke-width:1.5}.joint{fill:#182b38;stroke:#ffbd69;stroke-width:3}.hardware{fill:#182b38;stroke:#8da6b4;stroke-width:2}.blue{fill:#4c9df4;stroke:#a9dcff;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#0c1721"/>
+  <rect x="24" y="24" width="1552" height="952" fill="none" stroke="#385464"/>
+  <path d="M24 100H1576M24 845H1576" stroke="#385464"/>
+  <text x="55" y="61" class="tiny">ODRADEK LAB / FIELD REFERENCE 01</text>
+  <text x="55" y="85" font-size="13" fill="#91adbc">SETUP DRAFT → CURRENT CANON</text>
+  <rect x="1238" y="44" width="306" height="35" fill="#342a1c" stroke="#b18c50"/>
+  <text x="1253" y="67" class="tiny amber">EXAMPLE SETUP / 2026.11.13</text>
+  <text x="55" y="148" font-size="32">The desk, as arranged.</text>
+  <text x="55" y="177" class="sub">Front schematic · viewer facing the desk · relative placement from the supplied photo</text>
+  <rect x="55" y="206" width="1490" height="602" fill="url(#grid)" opacity=".24"/>
+
+  <!-- The large rear monitor is scenery; its private screen contents are omitted. -->
+  <path d="M513 252Q970 306 1478 276L1478 611Q975 642 513 590Z" fill="#09131d" stroke="#6d8594" stroke-width="5"/>
+  <path d="M528 269Q972 319 1462 292V593Q969 621 528 575Z" fill="url(#screen)" stroke="#2b5265"/>
+  <path d="M541 547Q973 591 1448 566" stroke="#365c69" fill="none"/>
+  <path d="M1053 627L1071 687H1195L1115 621" fill="#122632" stroke="#456373"/>
+  <text x="1225" y="379" class="tiny" text-anchor="middle">REAR MONITOR</text>
+  <text x="1225" y="401" class="tiny" text-anchor="middle">DISPLAY CONTENT OMITTED</text>
+
+  <!-- Table surface and fixed arm mounting area. -->
+  <path d="M68 718L1485 695L1544 785H55Z" fill="#182c38" stroke="#688492" stroke-width="2"/>
+  <path d="M55 785H1544V800H55Z" fill="#0b131b" stroke="#496472"/>
+  <path d="M160 703L300 701L316 744L141 747Z" fill="#1e3543" stroke="#6c8996"/>
+  <ellipse cx="228" cy="700" rx="59" ry="17" fill="#192b37" stroke="#e0b16b" stroke-width="2"/>
+  <rect x="182" y="628" width="91" height="70" rx="6" class="hardware"/>
+  <rect x="174" y="650" width="107" height="18" fill="#244a4e" stroke="#6f9f9b"/>
+  <path d="M185 662H209M216 662H228M236 662H263" stroke="#a2d4ce" stroke-width="5"/>
+  <circle cx="190" cy="680" r="4" fill="#ff8f72"/>
+  <circle cx="230" cy="630" r="30" class="joint"/>
+  <rect x="207" y="361" width="17" height="270" rx="5" fill="#122431" stroke="#8ca6b6" stroke-width="2"/>
+  <rect x="245" y="361" width="17" height="270" rx="5" fill="#122431" stroke="#8ca6b6" stroke-width="2"/>
+  <path d="M220 412L247 573M220 574L247 412" stroke="#4a6372" stroke-width="3"/>
+  <rect x="197" y="344" width="75" height="54" rx="8" class="hardware"/>
+  <circle cx="235" cy="370" r="20" class="joint"/>
+  <path d="M265 360L653 378L652 400L265 382Z" fill="#162733" stroke="#90aab6" stroke-width="3"/>
+  <path d="M270 368L646 386" stroke="#5a7381" stroke-width="3"/>
+  <path d="M250 384Q261 432 301 416L335 390" fill="none" stroke="#607c89" stroke-width="4"/>
+  <rect x="635" y="368" width="104" height="59" rx="9" class="hardware"/>
+  <path d="M737 384L762 395L754 427L732 429" class="hardware"/>
+  <rect x="748" y="367" width="16" height="115" rx="4" fill="url(#metal)" stroke="#d2e2df"/>
+  <rect x="741" y="398" width="30" height="57" fill="#305c80" stroke="#7bbfe6" stroke-width="2"/>
+  <path d="M749 482H762L757 544Z" fill="#a9bbc2" stroke="#d1e0e4"/>
+
+  <!-- Center laptop: open display, keyboard, blue Print Screen marker and pad. -->
+  <path d="M471 512H897Q904 512 904 520V693H466V521Q466 512 471 512Z" fill="#0b151e" stroke="#77909e" stroke-width="4"/>
+  <rect x="482" y="528" width="406" height="144" fill="#112330" stroke="#294957"/>
+  <circle cx="685" cy="520" r="2" fill="#99b4bf"/>
+  <text x="685" y="604" class="tiny" text-anchor="middle">DELL LAPTOP</text>
+  <path d="M468 691H904L962 764H425Z" fill="url(#metal)" stroke="#c2d0d4" stroke-width="2"/>
+  <path d="M484 700H885L906 733H463Z" fill="url(#keys)" stroke="#3d5968"/>
+  <rect x="837" y="701" width="23" height="11" rx="2" class="blue"/>
+  <path d="M612 738H770L777 756H604Z" fill="#869da9" stroke="#426170"/>
+  <path d="M410 752L434 751L446 778L406 780Z M956 752L977 752L987 779L953 778Z" class="blue"/>
+
+  <!-- Right-side camera and tabletop tripod. View direction is schematic only. -->
+  <path d="M1117 551L1117 615M1117 608L1036 762M1117 608L1164 775M1117 608L1250 737" fill="none" stroke="#9aadb4" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="1117" cy="595" r="13" class="joint"/>
+  <g transform="rotate(18 1110 517)"><rect x="1060" y="489" width="113" height="59" rx="10" class="hardware"/><ellipse cx="1055" cy="519" rx="13" ry="29" fill="#0a1720" stroke="#90c5cc" stroke-width="3"/><ellipse cx="1054" cy="519" rx="6" ry="16" fill="#24485d"/></g>
+  <path d="M1054 537L866 699" stroke="#81dee4" stroke-width="2" stroke-dasharray="8 7" marker-end="url(#look)"/>
+  <text x="935" y="629" class="tiny cyan" transform="rotate(-40 935 629)">TOWARD KEYBOARD</text>
+  <path d="M1263 692L1469 703L1510 754L1292 741Z" fill="#172b38" stroke="#698796" stroke-width="2"/>
+  <path d="M1279 704L1464 713L1485 739L1298 728Z" fill="url(#keys)"/>
+
+  <!-- Leaders distinguish objects, without treating photo perspective as calibration. -->
+  <text x="79" y="263" class="label amber">01 / RoArm-M2-S</text>
+  <text x="79" y="286" class="sub">Base on the left</text>
+  <path d="M195 301L218 339" class="leader"/>
+  <text x="380" y="460" class="label">HELD STYLUS</text>
+  <text x="380" y="483" class="sub">Tip downward in reference photo</text>
+  <path d="M589 470H715L744 491" class="leader"/>
+  <text x="890" y="222" class="label">04 / REAR DISPLAY</text>
+  <path d="M1056 231V274" class="leader"/>
+  <text x="1190" y="462" class="label cyan">03 / CAMERA</text>
+  <text x="1190" y="485" class="sub">Tripod to laptop's right</text>
+  <path d="M1190 496L1168 507" class="leader"/>
+  <text x="1230" y="657" class="tiny">AUXILIARY KEYBOARD</text>
+  <path d="M1371 666L1385 696" class="leader"/>
+  <text x="811" y="558" class="tiny cyan">BLUE TAPE / PrtSc</text>
+  <path d="M878 570L911 617L849 696" class="leader"/>
+  <text x="65" y="825" class="tiny">LEFT → ARM BASE</text>
+  <text x="643" y="825" class="tiny" text-anchor="middle">02 / LAPTOP CENTER · TAPE MARKS RETAINED</text>
+  <text x="1535" y="825" class="tiny" text-anchor="end">CAMERA + AUX KEYBOARD → RIGHT</text>
+
+  <text x="55" y="887" class="label amber">RELATIONSHIPS ARE CANON. DIMENSIONS ARE PENDING.</text>
+  <text x="55" y="917" class="sub">The photo governs current arrangement. Drawn spacing, joint pose and camera aim are illustrative.</text>
+  <text x="55" y="942" class="sub">No scale, measured coordinates, calibrated view cone or contact position is established by this diagram.</text>
+  <text x="1543" y="952" class="tiny" text-anchor="end">SETUP-2026-11-13-A / REV 1</text>
+</svg>

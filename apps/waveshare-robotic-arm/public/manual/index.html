@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark"><meta name="theme-color" content="#242820">
+  <title>RoArm · Manual control</title>
+  <link rel="stylesheet" href="/manual/style.css"><script type="module" src="/manual/app.js"></script>
+</head>
+<body>
+<main class="console">
+  <header>
+    <div class="nameplate"><span class="eyebrow">WAVESHARE / ROARM-M2-S</span><h1>MANUAL CONTROL<span class="edition">MK. 01</span></h1></div>
+    <button class="setup-button" id="setup-toggle" aria-expanded="false" aria-controls="setup">Connection &amp; setup <span aria-hidden="true">⚙</span></button>
+  </header>
+  <section class="status-bar" aria-label="Controller status">
+    <span class="status-light" id="mode-light"></span><strong id="mode">OFFLINE</strong><span class="divider"></span><span id="readiness">Checking controller…</span><span class="link-state" id="link-state">LOCAL CONSOLE</span>
+  </section>
+  <button id="open-repair" class="setup-button" hidden>Review &amp; repair position</button>
+  <section class="setup" id="setup" hidden>
+    <div><h2>Connection</h2><p id="setup-description">Each physical target uses the reviewed joint controls. Calibration and connection readiness are shown in the status bar.</p><a href="/index.html">Open robot setup →</a></div>
+    <div class="setup-actions"><button id="demo">Start simulator</button><button id="disconnect" disabled>Disconnect</button><p>Simulator uses the app’s provisional limits. It does not move the robot.</p></div>
+  </section>
+  <section class="intro"><div><span class="eyebrow">JOINT CONTROL BANK</span><p>Choose an angle. Press Move.</p></div><span class="bank-label">5 SERVOS <span>/</span> 4 CONTROLS</span></section>
+  <section id="joints" class="joint-grid" aria-label="Joint angle controls"></section>
+  <section class="command-bar">
+    <div><span class="eyebrow">CONTROL MODE</span><p id="authority">DISABLED</p></div>
+    <div class="enable-controls"><label id="supervision-row" hidden><input id="supervision" type="checkbox"> I am present at the power switch; the stock arm is secured flat on the tabletop, its 600 mm reach and space above are clear, the clamp is empty, and cables are slack.</label><button id="enable" disabled>Enable moves</button></div>
+    <button id="stop" class="stop"><span class="stop-square" aria-hidden="true"></span> STOP &amp; DISARM</button>
+  </section>
+  <section id="recovery" class="setup" hidden>
+    <div><h2>Recover current position</h2><p>The last move remains recorded. This checks the stopped arm for 30 seconds without moving it.</p></div>
+    <div class="setup-actions"><label><input id="recovery-inspection" type="checkbox"> <span id="recovery-inspection-text">The arm is stationary, touching nothing, with no unusual noise. I have not repositioned it by hand or reset its power since this move.</span></label><button id="recover" disabled>Check position &amp; resume controls</button></div>
+  </section>
+  <p id="message" class="message" role="status" aria-live="polite">Each Move click requests one joint action. Adjusting a dial sends no movement.</p>
+  <footer><span id="endpoint-policy">Joint-specific endpoint limits · each path is checked</span><span>Software stop cannot guarantee a physical stop.</span></footer>
+</main>
+<template id="joint-template">
+  <article class="joint"><span class="screw screw-a" aria-hidden="true"></span><span class="screw screw-b" aria-hidden="true"></span>
+    <div class="joint-heading"><div><span class="servo eyebrow"></span><h2></h2></div><span class="joint-number" aria-hidden="true"></span></div>
+    <div class="joint-body"><div class="dial" aria-hidden="true"><div class="dial-ticks"></div><div class="dial-face"><span class="dial-needle"></span><span class="dial-center"></span></div></div>
+      <div class="display"><span class="display-label">TARGET / DEG</span><div class="target-readout">—<span>°</span></div><div class="current-line">CURRENT <strong class="current">—</strong></div></div></div>
+    <div class="range-label"><span class="min">—</span><span class="range-caption">DOCUMENTED RANGE</span><span class="max">—</span></div>
+    <input class="slider" type="range" step="0.1" disabled>
+    <div class="joint-controls"><button class="minus" type="button" disabled>−</button><div class="angle-field"><input class="angle" type="number" step="0.1" inputmode="decimal" disabled><span>°</span></div><button class="plus" type="button" disabled>+</button><button class="move" type="button" disabled>MOVE <span aria-hidden="true">↗</span></button></div>
+    <p class="detail"></p>
+  </article>
+</template>
+</body></html>

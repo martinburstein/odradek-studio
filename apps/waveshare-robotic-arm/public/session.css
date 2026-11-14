@@ -1,0 +1,17 @@
+[hidden]{display:none!important}
+.view-switch{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0}
+.view-switch button{min-height:44px;width:auto}.view-switch button[aria-pressed="false"]{background:transparent;color:#ff7a00}
+#session-label{font-family:Consolas,monospace;font-size:12px;overflow-wrap:anywhere}
+.session-panel{padding:18px;margin:16px 0}.session-panel form{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin:16px 0}
+.session-panel input,.session-panel select{min-height:44px;max-width:100%;min-width:0}.session-panel label{width:100%}
+.session-panel button{min-height:44px}
+.session-panel summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:#ff7a00}
+#pairing-output{display:block;font:18px Consolas,monospace;padding:16px;overflow-wrap:anywhere}
+.paired-device{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:10px 0;border-top:1px solid #65301a}.paired-device span{overflow-wrap:anywhere;min-width:0}
+.paired-device button{min-height:44px;flex-shrink:0}
+.app-shell button,.app-shell input:not([type="checkbox"]),.app-shell select{min-height:44px}
+.app-shell .check-row{min-height:44px;cursor:pointer}
+.app-shell{padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.checkin-presence[data-state="simulated"]{color:#53f0a2}
+.checkin-presence[data-state="send-only"]{color:#ffbf59}
+@media(max-width:520px){.session-panel form>*{width:100%}.view-switch button{flex:1}.view-switch span{width:100%}.paired-device{flex-wrap:wrap}}

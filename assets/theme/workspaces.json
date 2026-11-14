@@ -1,0 +1,15 @@
+{
+  "tabs": [
+    {"id":"automatic","label":"Automatic","title":"Automatic","eyebrow":"01 / MOVEMENT DESIGN","description":"Design a motion. Rehearse it on the 3D replica."},
+    {"id":"manual","label":"Manual","title":"Manual","eyebrow":"02 / JOINT CONTROL","description":"Measured joint feedback and the existing live Move controls."},
+    {"id":"sync","label":"Sync View","title":"Sync View","eyebrow":"03 / SYSTEM SYNCHRONIZATION","description":"Controller, arm and service connections in one status console."},
+    {"id":"preview","label":"Simulation","title":"Simulation","eyebrow":"04 / KINEMATIC WORKBENCH","description":"Pull joints, tune precise angles and fit the desk. Preview only."},
+    {"id":"camera","label":"Live Camera","title":"Live Camera","eyebrow":"05 / LIVE OBSERVATION","description":"A live view of the work area. Frames stay in memory."},
+    {"id":"safety","label":"Safety Check","title":"Safety Check","eyebrow":"06 / RECOVERY AND SETUP","description":"Clean restart, Controller recovery and the existing Automatic inspection."}
+  ],
+  "tools": [
+    {"id":"manual","label":"Joint controls"},
+    {"id":"presets","label":"Movement library","title":"Movement Library","eyebrow":"02 / TEACH AND CAPTURE","description":"Save measured positions or manage your offline motion designs."},
+    {"id":"map","label":"Point map","title":"Point Map","eyebrow":"02 / DESK TARGETS","description":"Teach hover and contact positions from measured joint feedback."}
+  ]
+}

@@ -1,0 +1,1 @@
+{"name":"waveshare-robotic-arm","version":"0.1.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"start":"node src/server.mjs","test":"node --test test/*.test.mjs","demo":"node tools/robot.mjs demo","verify":"node tools/verify.mjs"},"dependencies":{"serialport":"13.0.0"}}

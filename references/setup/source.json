@@ -1,0 +1,7 @@
+{
+  "id": "EXAMPLE-DESK",
+  "status": "illustrative",
+  "scale": "not-to-scale",
+  "diagram": "../../assets/setup/setup.canonical.svg",
+  "physicalRegistration": false
+}

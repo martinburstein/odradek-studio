@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>RoArm-M2-S · Personal Console</title>
+  <link rel="stylesheet" href="/reference.css">
+  <link rel="stylesheet" href="/app.css">
+  <link rel="stylesheet" href="/checkin.css">
+  <link rel="stylesheet" href="/session.css">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#080304">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main class="shell app-shell">
+    <header class="shell-header app-header">
+      <div class="shell-header-title">
+        <p class="shell-kicker">PERSONAL ROBOTICS CONSOLE</p>
+        <h1 class="shell-name">RoArm / M2-S</h1>
+        <p class="header-subtitle">Supervised control · measured state remains separate from intent</p>
+        <a href="/manual/index.html">Open simple manual controls →</a>
+      </div>
+      <div class="shell-header-bus header-readouts" aria-label="Current system status">
+        <span id="connection-chip" class="state-chip is-offline">OFFLINE</span>
+        <span id="arm-chip" class="state-chip">DISARMED</span>
+        <span id="telemetry-chip" class="state-chip">NO TELEMETRY</span>
+      </div>
+    </header>
+
+    <nav class="view-switch" aria-label="Console views"><button id="checkin-view-button" type="button" aria-pressed="true">Check-in</button><button id="control-view-button" type="button" aria-pressed="false" hidden>Control desk</button><span id="session-label" role="status">Checking access…</span></nav>
+    <section id="pairing-panel" class="panel session-panel" hidden>
+      <h2>Pair this device</h2><p>On the laptop, create an observer or control pairing code. Enter it here over your private HTTPS connection.</p>
+      <form id="pairing-form"><label for="pairing-code">Single-use pairing code</label><input id="pairing-code" autocomplete="off" maxlength="128" required><button type="submit">Pair device</button></form>
+    </section>
+    <section id="admin-panel" class="panel session-panel" hidden>
+      <details><summary>Device access</summary><p>Observer devices can check in. Control devices can claim one exclusive, timed command lease.</p><form id="issue-pairing-form"><label for="pairing-role">New device access</label><select id="pairing-role"><option value="observer">Observer</option><option value="control">Control</option></select><button type="submit">Create pairing code</button></form><output id="pairing-output" hidden></output><button id="hide-pairing-code" type="button" class="secondary" hidden>Hide code</button><div id="paired-devices"></div></details>
+    </section>
+    <section id="checkin-view" aria-label="Check-in view"></section>
+    <section id="control-view" hidden>
+    <section id="simulator-banner" class="simulator-banner" role="status" aria-live="polite">
+      <strong>DISCONNECTED · USB OBSERVATION READY</strong>
+      <span>USB serial COM4 is preselected. Connect to read the arm; startup stays disconnected and disarmed. Simulator is available for development.</span>
+    </section>
+
+    <div class="app-grid">
+      <section class="panel panel-setup" aria-labelledby="setup-title">
+        <header class="panel-header panel-title-row">
+          <div><p class="panel-kicker">01 / LINK &amp; SAFETY</p><h2 id="setup-title">Connection desk</h2></div>
+          <span id="setup-state" class="panel-tag">DISCONNECTED</span>
+        </header>
+
+        <form id="connection-form" class="control-block">
+          <label for="connection-mode">Connection mode</label>
+          <select id="connection-mode" name="mode">
+            <option value="simulator">Simulator · software only</option>
+            <option value="serial" selected>USB serial · saved default</option>
+            <option value="http">HTTP · send only</option>
+          </select>
+          <div id="serial-fields" class="mode-fields">
+            <label for="serial-port">Windows COM port</label>
+            <input id="serial-port" name="port" inputmode="text" autocomplete="off" value="COM4" placeholder="COM4" aria-describedby="serial-help">
+            <p id="serial-help" class="field-hint">Saved setup: COM4 at 115200 baud. Connect reads feedback without arming. If Windows assigns a different port, update it here.</p>
+          </div>
+          <div id="http-fields" class="mode-fields" hidden>
+            <label for="http-host">Private robot host</label>
+            <input id="http-host" name="host" inputmode="url" autocomplete="off" placeholder="192.168.x.x">
+            <label for="http-port">HTTP port</label>
+            <input id="http-port" name="httpPort" type="number" min="1" max="65535" step="1" value="80">
+            <p class="field-hint">Only literal private, loopback, or link-local addresses are accepted. HTTP has no measured feedback.</p>
+          </div>
+          <div class="button-row">
+            <button id="connect-button" type="submit">Connect</button>
+            <button id="disconnect-button" type="button" class="secondary">Disconnect</button>
+          </div>
+        </form>
+
+        <div class="divider"></div>
+        <form id="owner-form" class="control-block">
+          <label for="owner-name">Command owner ID</label>
+          <div class="inline-control"><input id="owner-name" name="owner" autocomplete="username" value="local-operator" maxlength="64"><button type="submit" class="secondary">Claim</button></div>
+          <p class="field-hint">This name is bound to your authenticated device. The lease expires after 30 seconds without control activity.</p>
+        </form>
+        <div class="owner-line"><span>Current owner</span><strong id="owner-value">NONE</strong></div>
+        <div class="button-row safety-buttons">
+          <button id="arm-button" type="button" disabled>Arm controls</button>
+          <button id="stop-button" type="button" class="danger">Stop software queue</button>
+        </div>
+        <p class="warning-copy">Stop cancels the local task queue and disarms. Servo motion may continue; physical intervention may be required.</p>
+
+        <div class="divider"></div>
+        <form id="commission-form" class="control-block">
+          <p class="panel-kicker">COMMISSIONING GATE</p>
+          <label for="variant">Declared model</label>
+          <select id="variant" name="variant">
+            <option value="simulator">Simulator</option>
+            <option value="RoArm-M2-S" selected>RoArm-M2-S</option>
+            <option value="RoArm-M2-Pro">RoArm-M2-Pro</option>
+          </select>
+          <label for="firmware">Firmware / profile</label>
+          <input id="firmware" name="firmware" autocomplete="off" placeholder="Verify installed firmware before commissioning">
+          <label class="check-row" for="fixture-confirmed"><input id="fixture-confirmed" type="checkbox"> Fixture secured and clear</label>
+          <label class="check-row" for="clearance-confirmed"><input id="clearance-confirmed" type="checkbox"> Workspace clearance confirmed</label>
+          <label class="check-row" for="limits-confirmed"><input id="limits-confirmed" type="checkbox"> Limits/profile confirmed</label>
+          <button id="commission-button" type="submit" class="secondary" disabled>Commission selected profile</button>
+          <p class="field-hint">Physical arming requires a locally verified hardware evidence profile and fresh serial feedback. Confirmation boxes alone do not authorize it.</p>
+        </form>
+
+        <div class="divider"></div>
+        <section class="control-block" aria-labelledby="lift-heading">
+          <h2 id="lift-heading">Supervised first lift</h2>
+          <p class="field-hint">Preview a nominal 2 mm upward lift. The test stays blocked until reviewed firmware, geometry and hardware evidence is installed. General motion controls remain uncommissioned.</p>
+          <button id="lift-prepare" type="button" class="secondary" disabled>Prepare 2 mm lift preview</button>
+          <div id="lift-summary" class="field-hint" role="status" aria-live="polite"></div>
+          <label class="check-row" for="lift-baseSecured"><input id="lift-baseSecured" type="checkbox"> Base is firmly secured</label>
+          <label class="check-row" for="lift-workspaceClear"><input id="lift-workspaceClear" type="checkbox"> Full arm reach is clear</label>
+          <label class="check-row" for="lift-gripperEmpty"><input id="lift-gripperEmpty" type="checkbox"> Gripper is empty</label>
+          <label class="check-row" for="lift-powerSwitchReady"><input id="lift-powerSwitchReady" type="checkbox"> I am beside the physical power switch</label>
+          <label class="check-row" for="lift-experimentalMotionAccepted"><input id="lift-experimentalMotionAccepted" type="checkbox"> I reviewed this preview and authorize this one experimental lift</label>
+          <button id="lift-run" type="button" disabled>Arm one test: lift 2 mm</button>
+          <p class="warning-copy">A software stop cannot guarantee servo stopping. Model predictions do not verify physical clearance or travel. No automatic retry or return.</p>
+          <label for="lift-outcome">What did you actually observe?</label>
+          <select id="lift-outcome"><option value="uncertain">Uncertain</option><option value="upward-motion-seen">I saw upward movement</option><option value="no-motion-seen">I saw no movement</option><option value="unexpected-motion">I saw unexpected movement</option></select>
+          <button id="lift-observe" type="button" class="secondary" disabled>Save observation</button>
+        </section>
+        <div class="divider"></div>
+        <form id="calibration-form" class="control-block">
+          <label for="calibration-name">Reference pose name</label>
+          <input id="calibration-name" maxlength="48" value="bench-reference" autocomplete="off">
+          <button id="capture-calibration-button" type="submit" class="secondary" disabled>Capture calibration reference</button>
+          <p class="field-hint">Observation-only snapshot. It does not change servo zero offsets or firmware calibration.</p>
+        </form>
+      </section>
+
+      <section class="panel panel-machine" aria-labelledby="machine-title">
+        <header class="panel-header panel-title-row">
+          <div><p class="panel-kicker">02 / ARTICULATED STATE</p><h2 id="machine-title">RoArm-M2-S / 4 DOF</h2></div>
+          <span class="panel-tag">SCHEMATIC · NOT CALIBRATED</span>
+        </header>
+        <div class="machine-status-line">
+          <div><span class="micro-label">LINK</span><strong id="visual-link-state">DISCONNECTED</strong></div>
+          <div><span class="micro-label">FIRMWARE</span><strong id="firmware-state">UNKNOWN</strong></div>
+          <div><span class="micro-label">LAST TELEMETRY</span><strong id="telemetry-time">NEVER</strong></div>
+        </div>
+        <div id="arm-visualization" class="arm-visualization-host" aria-live="off"></div>
+        <div class="truth-note"><span aria-hidden="true">●</span> A command or acknowledgment never proves physical arrival. Hardware state appears only from fresh serial feedback.</div>
+        <div class="telemetry-cards" aria-label="Current measured values">
+          <article><span>MEASURED SOURCE</span><strong id="measured-source">UNAVAILABLE</strong></article>
+          <article><span>JOINT FEEDBACK</span><strong id="measured-summary">—</strong></article>
+          <article><span>SIMULATOR STATE</span><strong id="simulated-summary">INACTIVE</strong></article>
+        </div>
+      </section>
+
+      <section class="panel panel-command" aria-labelledby="command-title">
+        <header class="panel-header panel-title-row">
+          <div><p class="panel-kicker">03 / INTENT &amp; TASKS</p><h2 id="command-title">Command desk</h2></div>
+          <span id="motion-gate" class="panel-tag">LOCKED</span>
+        </header>
+
+        <form id="motion-form" class="control-block">
+          <label for="motion-kind">Target type</label>
+          <select id="motion-kind" name="kind"><option value="joints">Joint target · radians</option><option value="cartesian">Cartesian target · mm / rad</option></select>
+          <div id="joint-target-fields" class="target-grid">
+            <label for="target-base">Base yaw <span>rad</span><input id="target-base" data-joint="base" type="number" step="0.01" value="0"></label>
+            <label for="target-shoulder">Shoulder <span>rad</span><input id="target-shoulder" data-joint="shoulder" type="number" step="0.01" value="0.8"></label>
+            <label for="target-elbow">Elbow <span>rad</span><input id="target-elbow" data-joint="elbow" type="number" step="0.01" value="1.2"></label>
+            <label for="target-gripper">Gripper <span>rad</span><input id="target-gripper" data-joint="gripper" type="number" step="0.01" value="1.57"></label>
+          </div>
+          <div id="cartesian-target-fields" class="target-grid" hidden>
+            <label for="target-x">X <span>mm</span><input id="target-x" data-point="x" type="number" step="1" value="235"></label>
+            <label for="target-y">Y <span>mm</span><input id="target-y" data-point="y" type="number" step="1" value="0"></label>
+            <label for="target-z">Z <span>mm</span><input id="target-z" data-point="z" type="number" step="1" value="234"></label>
+            <label for="target-t">Tool angle <span>rad</span><input id="target-t" data-point="t" type="number" step="0.01" value="1.57"></label>
+          </div>
+          <p class="field-hint">Inputs are targets, not observed state. Limits and mode restrictions are enforced by the controller.</p>
+          <button id="move-button" type="submit" disabled>Send one bounded target</button>
+        </form>
+
+        <div class="divider"></div>
+        <form id="gripper-form" class="control-block">
+          <p class="panel-kicker">END EFFECTOR</p>
+          <label for="gripper-target">Gripper target <span>rad</span></label>
+          <input id="gripper-target" type="number" step="0.01" value="1.57">
+          <p class="field-hint">Uses current fresh feedback for the other joints; unavailable until measured or simulated state exists.</p>
+          <button id="gripper-button" type="submit" class="secondary" disabled>Send gripper target</button>
+        </form>
+
+        <div class="divider"></div>
+        <section class="pose-editor" aria-labelledby="poses-title">
+          <p class="panel-kicker">SAVED JOINT TARGETS</p>
+          <h3 id="poses-title">Named poses</h3>
+          <form id="pose-form" class="control-block">
+            <label for="pose-name">Save current target as</label>
+            <div class="inline-control"><input id="pose-name" maxlength="48" autocomplete="off" placeholder="e.g. home"><button type="submit" class="secondary">Save pose</button></div>
+          </form>
+          <div id="pose-list" class="pose-list" aria-live="polite"><p class="empty-state">No saved poses.</p></div>
+        </section>
+
+        <div class="divider"></div>
+        <section aria-labelledby="sequence-title">
+          <p class="panel-kicker">BOUNDED AUTOMATION</p>
+          <h3 id="sequence-title">Sequence editor</h3>
+          <div class="sequence-options">
+            <label for="sequence-name">Sequence name<input id="sequence-name" maxlength="60" value="careful-sequence"></label>
+            <label for="sequence-deadline">Deadline · ms<input id="sequence-deadline" type="number" min="1" max="60000" step="100" value="10000"></label>
+            <label for="step-dwell">Dwell per step · ms<input id="step-dwell" type="number" min="0" max="5000" step="100" value="0"></label>
+          </div>
+          <div class="button-row sequence-actions"><button id="add-step-button" type="button" class="secondary">Add current target</button><button id="clear-steps-button" type="button" class="secondary">Clear steps</button></div>
+          <ol id="sequence-list" class="sequence-list"><li class="empty-state">No steps queued.</li></ol>
+          <button id="run-sequence-button" type="button" disabled>Run bounded sequence</button>
+          <p class="field-hint">Maximum 20 steps · deadline 1–60,000 ms · each dwell 0–5,000 ms.</p>
+        </section>
+      </section>
+
+      <section class="panel panel-history" aria-labelledby="history-title">
+        <header class="panel-header panel-title-row">
+          <div><p class="panel-kicker">04 / ACTIVITY RECORD</p><h2 id="history-title">Telemetry &amp; history</h2></div>
+          <span id="history-count" class="panel-tag">0 EVENTS</span>
+        </header>
+        <div class="history-headline"><div><span class="micro-label">ACTIVE TASK</span><strong id="task-state">IDLE</strong></div><div><span class="micro-label">COMMAND TARGET</span><strong id="command-state">NONE</strong></div><div><span class="micro-label">LAST UPDATE</span><strong id="updated-state">—</strong></div></div>
+        <div class="history-scroll">
+          <table class="history-table">
+            <caption class="visually-hidden">Recent activity with distinct command, acknowledgment, observation, and simulation evidence labels</caption>
+            <thead><tr><th scope="col">Time</th><th scope="col">Event</th><th scope="col">Outcome</th><th scope="col">Evidence</th><th scope="col">Mode</th></tr></thead>
+            <tbody id="history-body"><tr><td colspan="5" class="empty-state">No activity recorded yet.</td></tr></tbody>
+          </table>
+        </div>
+        <p class="field-hint">A sent command, transport acknowledgment, telemetry observation, and simulator result are different evidence classes.</p>
+      </section>
+    </div>
+    <div class="button-row"><button id="renew-owner" type="button" class="secondary">Renew my lease</button><button id="release-owner" type="button" class="secondary">Release controls</button></div>
+    </section>
+    <div id="app-message" class="app-message" role="status" aria-live="polite" hidden></div>
+    <footer class="app-footer"><span>PRIVATE PERSONAL CONSOLE</span><span>Observation · exclusive device control</span><span>HARDWARE VERIFICATION PENDING</span></footer>
+  </main>
+</body>
+</html>

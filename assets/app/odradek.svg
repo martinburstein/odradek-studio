@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Odradek Lab</title>
+  <desc>Charcoal chamfered console with an articulated arm, a 45 degree stylus and cyan contact target.</desc>
+  <polygon points="39,12 217,12 244,39 244,217 217,244 39,244 12,217 12,39" fill="#101015" stroke="#ff9d2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="43,22 213,22 234,43 234,213 213,234 43,234 22,213 22,43" fill="#1d2026" stroke="#68401f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="73,218 78,202 89,197 132,197 145,207 143,218 132,224 83,224" fill="#414b52" stroke="#0a0b0e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="104,204 98,166" fill="none" stroke="#0a0b0e" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="104,203 98,166" fill="none" stroke="#87939a" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="101,198 96,169" fill="none" stroke="#c7cece" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="98,166 132,132" fill="none" stroke="#0a0b0e" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="98,166 132,132" fill="none" stroke="#87939a" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="101,162 132,134" fill="none" stroke="#c7cece" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="132,132 170,106" fill="none" stroke="#0a0b0e" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="132,132 170,106" fill="none" stroke="#87939a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="135,129 168,107" fill="none" stroke="#c7cece" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="104" cy="203" r="12" fill="#414b52" stroke="#08090b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="104" cy="203" r="6" fill="#ff9d2e" stroke="#68401f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="98" cy="166" r="13" fill="#414b52" stroke="#08090b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="98" cy="166" r="6" fill="#ff9d2e" stroke="#68401f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="132" cy="132" r="12" fill="#414b52" stroke="#08090b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="132" cy="132" r="5.5" fill="#ff9d2e" stroke="#68401f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="170" cy="106" r="8" fill="#414b52" stroke="#08090b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="166,108 176,112" fill="none" stroke="#0a0b0e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="166,108 176,112" fill="none" stroke="#c7cece" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="169,104 216,57" fill="none" stroke="#0a0b0e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="169,104 216,57" fill="none" stroke="#eef0e9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="174,99 210,63" fill="none" stroke="#c7cece" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="181,98 190,107" fill="none" stroke="#8a4c1e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="181,98 190,107" fill="none" stroke="#ff9d2e" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="194,85 200,91" fill="none" stroke="#68401f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="216" cy="57" r="11" fill="none" stroke="#70e7ed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="216" cy="57" r="3.2" fill="#70e7ed" stroke="None" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="216,43 216,48" fill="none" stroke="#70e7ed" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="225,57 230,57" fill="none" stroke="#70e7ed" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

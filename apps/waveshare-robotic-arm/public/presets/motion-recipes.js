@@ -1,0 +1,19 @@
+import {ILLUSTRATION_POSE,retargetFrames} from './motion-score.js';
+// Original RoArm choreography inspired by composable robot animation, not a
+// port of another robot's joint angles. Offsets are relative to a chosen pose.
+const frame=(label,offsets,durationMs,holdMs=0)=>({label,offsets,durationMs,holdMs});
+const recipes=[
+ {id:'curious-scan',name:'Curious scan',tag:'SCAN / TRACK / RETURN',description:'A small preparation, a slow search, then a softer return. The elbow follows the base instead of stopping at every beat.',frames:[frame('Center',{},0),frame('Prepare',{base:2,elbow:-1},650),frame('Look left',{base:-8,shoulder:-1,elbow:3},1300,220),frame('Track',{base:-3,shoulder:0,elbow:5},900),frame('Look right',{base:8,shoulder:1,elbow:3},1400,350),frame('Ease home',{base:3,elbow:1},950),frame('Settle',{},900,400)]},
+ {id:'double-take',name:'Double take',tag:'NOTICE / RECONSIDER',description:'A quick first glance, a pause, then a larger second look. Asymmetry gives the gesture a readable intention.',frames:[frame('Center',{},0),frame('Notice',{base:4,elbow:2},700,120),frame('Look away',{base:0,elbow:1},650,180),frame('Look again',{base:9,shoulder:-1,elbow:5},800,650),frame('Soften',{base:6,elbow:3},900),frame('Settle',{},1300,350)]},
+ {id:'attentive-listen',name:'Attentive listen',tag:'ORIENT / LEAN / HOLD',description:'Turn toward an imagined speaker, lean in slightly, hold attention, and relax. A finite phrase, not an unattended idle loop.',frames:[frame('Center',{},0),frame('Orient',{base:3,elbow:1},900),frame('Lean in',{base:5,shoulder:-2,elbow:5},1100,1200),frame('Acknowledge',{base:5,shoulder:-1,elbow:3},700,200),frame('Relax',{base:2,elbow:1},1100),frame('Settle',{},1000,400)]},
+ {id:'search-lock',name:'Search & lock',tag:'SCAN / ACQUIRE / FOCUS',description:'An uneven search resolves into a deliberate held look. The final focus is distinct from the exploratory passes.',frames:[frame('Center',{},0),frame('Low sweep',{base:-7,elbow:1},1100,150),frame('Sweep through',{base:0,elbow:3},900),frame('Far glance',{base:8,elbow:5},1000,180),frame('Acquire',{base:4,shoulder:-1,elbow:7},850,1100),frame('Release',{base:2,elbow:2},1200),frame('Settle',{},1100,400)]},
+ {id:'acknowledge',name:'Small acknowledgement',tag:'NOTICE / NOD',description:'A restrained two-part nod with a slight turn. The second accent is smaller, so it reads as a response rather than a dance.',frames:[frame('Center',{},0),frame('Attend',{base:2,elbow:2},700,160),frame('Nod',{base:2,elbow:-3},650),frame('Recover',{base:1,elbow:1},750,180),frame('Settle',{},1000,400)]},
+ {id:'wake-settle',name:'Wake & settle',tag:'ANTICIPATE / OPEN / REST',description:'A small inward preparation opens into an alert posture, then settles in two stages. The gripper stays fixed.',frames:[frame('Center',{},0),frame('Gather',{base:-2,shoulder:1,elbow:-3},1000,150),frame('Wake',{base:5,shoulder:-2,elbow:7},1200,450),frame('Exhale',{base:2,shoulder:-1,elbow:4},1200),frame('Rest',{},1500,600)]},
+ {id:'quiet-breath',name:'Quiet breath',tag:'TWO FINITE BREATHS',description:'Two subtle shoulder-and-elbow breaths with unequal timing. Play once or three times; it never starts itself.',frames:[frame('Center',{},0,350),frame('First breath',{shoulder:-.7,elbow:1.7},1500,120),frame('Release',{},1900,600),frame('Second breath',{base:.6,shoulder:-.5,elbow:1.2},1700,160),frame('Rest',{},2200,500)]}
+];
+export const motionRecipes=()=>recipes.map(({frames,...r})=>({...r,positions:frames.length}));
+export function recipeFrames(id,options={}){
+ const recipe=recipes.find(r=>r.id===id);if(!recipe)throw Error('Unknown motion phrase');
+ const frames=recipe.frames.map(f=>({label:f.label,durationMs:f.durationMs,holdMs:f.holdMs,pose:Object.fromEntries(Object.entries(ILLUSTRATION_POSE).map(([j,v])=>[j,v+(f.offsets[j]??0)]))}));
+ return retargetFrames(frames,options.baseline??ILLUSTRATION_POSE,{intensity:options.intensity??1,mirror:options.mirror??false});
+}

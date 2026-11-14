@@ -1,0 +1,962 @@
+{
+  "schema": 2,
+  "product": "Odradek Studio",
+  "version": "0.5.5",
+  "purpose": "Curated release component inventory; no device profiles or commissioning data.",
+  "files": [
+    {
+      "component": "bot-crossing",
+      "path": "arm-manual/index.html",
+      "bytes": 317,
+      "sha256": "a9d18dd3d9880254020db491d8fe508b028d05eb23cc97622750ee8a13e9012f"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "LICENSE",
+      "bytes": 1090,
+      "sha256": "d3e02f957250a6b5faad51e76ea699194140c01ff80dd1a776b4ffb35d171898"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/arm-manual/main.js",
+      "bytes": 15598,
+      "sha256": "696aea75e319186cf57c0bd375cf525f9d651ee740cce1317731bb2a59f7add1"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/arm-manual/model.js",
+      "bytes": 2064,
+      "sha256": "01e6b539b600a478608be93fec66080d04a7f1f3efe289c33653806c0e2281d0"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/arm-manual/style.css",
+      "bytes": 5565,
+      "sha256": "f4f3ee1800e840974855db6c0664472d7b334febdd09c02b9f614498bb8a2b6b"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/arm-manual/workbench.js",
+      "bytes": 4268,
+      "sha256": "2cc0f596766258685770ecffa64a23c1138e8d6919755934cb121d40c869868a"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/core/camera.js",
+      "bytes": 18795,
+      "sha256": "f3c1b103b76d22f41a3045739e3928e3c66c2755a3c8c7b720ab4636d220feb9"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/core/engine.js",
+      "bytes": 18445,
+      "sha256": "dbdc11de41a2a5b1c1043a1cb342d9ec4857ba8b8070a27b3de4fb33f74ab091"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/core/settings.js",
+      "bytes": 8537,
+      "sha256": "df1bb6a09808fd1e42c4d10233931d31cd17208d2e9395642825ad853be83b7f"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/core/tiltshift.js",
+      "bytes": 10335,
+      "sha256": "2200c3c55cc46ac19e6a1ec2a63b772ab0b6479b2906f6a4637f631be0ab2472"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/ui/roarm-preview.js",
+      "bytes": 5268,
+      "sha256": "6a476d52bc9b99a147ba898e6ce1101b5a921caffbe37bdf8a229b6ef59f2b11"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/world/kit.js",
+      "bytes": 7538,
+      "sha256": "3996d1e3d0f38a2aa2a26d07e5864b5fc379f94879150ef22e0f27684fefc772"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/world/planet.js",
+      "bytes": 17329,
+      "sha256": "5c93cd4fcff3a9120b25db903a16790447b396489621c6d42e4db0c9d4d7352d"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/world/roarm-model.js",
+      "bytes": 10795,
+      "sha256": "47832fee5f024fe0bcce9b5aecc59e01c4a65ca29dc69c81db2094074f7a9da7"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "src/world/roarm-preview.js",
+      "bytes": 6574,
+      "sha256": "2b64f9c5a207a6fe5845edd35f39b3155b80cd3926933ef761a768ba06221cc7"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "test/arm-manual.test.mjs",
+      "bytes": 2544,
+      "sha256": "1f12cc3d55af99b340f7ab0e251ffe3b128eb45ad7082197a53657917da8c35c"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "test/roarm-model.test.mjs",
+      "bytes": 5102,
+      "sha256": "952b33b33988c078cb672ce929f939957722c60d663d0796c821af6627705e3a"
+    },
+    {
+      "component": "bot-crossing",
+      "path": "test/roarm-preview.test.mjs",
+      "bytes": 6939,
+      "sha256": "f4c5c426b1eb4d2870965e751b9f7357313ac9964406108f49767583e60fc0d6"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "package-lock.json",
+      "bytes": 11116,
+      "sha256": "92cfdf02cde933f62e25a75f79508351a153b2a66a53d17f35cf4ac02c6b58ff"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "package.json",
+      "bytes": 294,
+      "sha256": "bcbcc75188c2b05f3732b3e2743d77d6fe787cf9f86b19ad65cf092831f4cd56"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/alerts.js",
+      "bytes": 3782,
+      "sha256": "eb1d400339703c6fd020a2373c4ec58b617d57ff1d7314cb8cb7b7187a1baabd"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/app.css",
+      "bytes": 14005,
+      "sha256": "ac5d69bf9f58276a3063f943f124e643309b09ab7e6d0e75957774772fdc22f1"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/app.js",
+      "bytes": 25686,
+      "sha256": "20b99b61faa2f04cda24736a0e8998ec0eb26138c87bcdf93ab262f72eb3b2f7"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/arm.js",
+      "bytes": 15598,
+      "sha256": "2c0799080f3cb2e6e185a8ce501ba6911bf5d0e25b9721f8995c571ebcb7583e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/camera.js",
+      "bytes": 3895,
+      "sha256": "32812f93f128375b9d688c248d37e8ca5fa173137bab7815447f079eb9902e39"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/checkin.css",
+      "bytes": 5497,
+      "sha256": "6e060e7fdbf96854ea7cbe9ceed0b5243859010a0e06e5e8430b6a54da75efaa"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/checkin.js",
+      "bytes": 9995,
+      "sha256": "694b84d4ff82f1ba75150d96fc6767a5a7e12668662886df19ec71b9f2ce8e30"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/connectivity.js",
+      "bytes": 3505,
+      "sha256": "f9abc347d533c381906f81d35d835f118d74ffbba49872deae76fd973005fcd1"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/icon.svg",
+      "bytes": 869,
+      "sha256": "9c7e803cc7eefe73e3a1d84a77a8d7c8c7a451c8a376ce84c04d9cdc45c727ac"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/index.html",
+      "bytes": 18196,
+      "sha256": "a6d8c076218b685ef83714a1625c408add6d28f381a24594c459004ff917b2d5"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/kinematics.js",
+      "bytes": 4286,
+      "sha256": "1b08f417684ceb245eed965407a442cdd6752143f6bd74405b809aecbcdd7c2e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/manifest.webmanifest",
+      "bytes": 442,
+      "sha256": "e23c4bcf1fd0cf296b3fbcbf1411a31bf50b2cea2468afa5518c5cb6a205f947"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/manual/app.js",
+      "bytes": 17862,
+      "sha256": "42a0fc7b0788de8ea85244def4b04d17d450b25e3b82497d2ef91a45d84d23c1"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/manual/index.html",
+      "bytes": 4792,
+      "sha256": "bd597060ed08cd3c4f775e18576adc3fc8b0bb4497abedc310e2a6f9f4e2eb84"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/manual/model.js",
+      "bytes": 4372,
+      "sha256": "de695c1fe6045e5ba7e5df6982fb619d0c7968f4cddefcc71a18fbd7d242bdc6"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/manual/style.css",
+      "bytes": 8717,
+      "sha256": "a757919ab1ddf010e7a181eaf6f04a6c341c4fcedd55cbc0c6bc40407b147f98"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/app.js",
+      "bytes": 40150,
+      "sha256": "1c3c0d50b82d9b6bfee55303213040cd224f6492698ea97c4f203fbf5f1239c1"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/index.html",
+      "bytes": 10210,
+      "sha256": "915e20249904835f47c56d7b626c4733650861edf1a01b5e97b8035b40c39109"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/motion-lab.css",
+      "bytes": 6183,
+      "sha256": "eb91adfd311d7c2936eda2c9782431a1e6a53e47064e48093eba6af38c4f226e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/motion-lab.js",
+      "bytes": 15506,
+      "sha256": "78117c5ccccb2a21120d1b2393c6268ca6def6573fa248cbb0b1ebdb79cdc6fb"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/motion-recipes.js",
+      "bytes": 3948,
+      "sha256": "e6332f4a3d93af31f08d30153ac36f3687c70259ae2b5aec057517aca354c0d8"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/motion-renderer.js",
+      "bytes": 4004,
+      "sha256": "58b44eced370920e9e1d1e322308c30fa5576aa80d671e2cb6b302e7885de224"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/motion-score.js",
+      "bytes": 7208,
+      "sha256": "951f43e91a66779a5b70cb7fa00a3dc90165be0d8555f3ecaf6972a7d9ffbdd9"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/presets/style.css",
+      "bytes": 14608,
+      "sha256": "7c6d7f56bea1c47581124144d9ff644f54c77f6d9af8c0aa33bc0a95a0cedcbe"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/reference.css",
+      "bytes": 45953,
+      "sha256": "0980ae87cb50e7c5987b9e6fe21d78dba9828f251a1ef2e250c9838fe4544a76"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/session-ui.js",
+      "bytes": 5277,
+      "sha256": "8dbed35b92032cf6c11273333b98538042b8c390bc5eaf9977874ba351c54804"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/session.css",
+      "bytes": 1606,
+      "sha256": "e4ff4ce150125a10aac9941d118c2db7ac60016283ff573da4144828c1c4b456"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/studio/automatic/index.html",
+      "bytes": 3191,
+      "sha256": "1a00820d13394e23d533dbf0a448ebe547b7098c687ab3fb1d1471778c04d7a0"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/studio/bridge.js",
+      "bytes": 285,
+      "sha256": "e3ccee206358bc5b260c970c2cb1611248fd8325a4e8dbe77328324c964c72a3"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/studio/manual/index.html",
+      "bytes": 4932,
+      "sha256": "68f002b5af9bcde5252a5dfd23528edd55613ef200020b0b3be6a8963a2bc75b"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/studio/theme.css",
+      "bytes": 5038,
+      "sha256": "e426f7f4c3cd6e9711c40b92bae1afd427063b660198b6cfda4be43879a4bb49"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/sw.js",
+      "bytes": 3337,
+      "sha256": "3583bed3bfa1e375fc6bcd3b13676a31687c274f889cd642c5e4205be27cb566"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/sync/app.js",
+      "bytes": 5643,
+      "sha256": "6b4883eafb26fd1e974e4d1f2cb18e9bdb38a9e936c2d5a3c173ec7389a2946e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/sync/client.js",
+      "bytes": 2783,
+      "sha256": "530dd09fd0e0bf8148aa5e93f624a2e6af4b0c324c44720eab20bd7c156a0565"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/sync/index.html",
+      "bytes": 3143,
+      "sha256": "efa19835c0d98c419815a71d7f89fd532ffe82f75f6e26ccb0e4366f7d61b109"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/sync/style.css",
+      "bytes": 5666,
+      "sha256": "aa0cb9d1cc98ea3b4ff9aa9510f82e40dc11a76ff5e07f72180f78f6fe2b5437"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/timeline.js",
+      "bytes": 5957,
+      "sha256": "863a7a297da0431771cc04bb71bee5e3bc22ef29627c53f953c719e44abd86b6"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/wire-arm.js",
+      "bytes": 6473,
+      "sha256": "237b9a6c61f2d753bbe08d6765a9719777761fe090b173bc7db98df1a201da53"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/wire-geometry.js",
+      "bytes": 5453,
+      "sha256": "ecb31013d949f8779020572e56f67328c9bf82e48cdbb5b4f35152d678320054"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "public/z-lift.js",
+      "bytes": 4277,
+      "sha256": "5b172ba984aa8ede7a90572352cb0f517f905445fca85f3fa0c29a9f6bfe2516"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/auth-guard.mjs",
+      "bytes": 1659,
+      "sha256": "b563af0b3e0edfb742e982cbbcacd3d4967f83d4cb9c5d36f34f9421433bd899"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/auth.mjs",
+      "bytes": 9887,
+      "sha256": "b12a2b48dbdeb4ad299e80973ce98f8a45200897c5a661750d447b72c55eaf13"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/base-feedforward-hypothesis.mjs",
+      "bytes": 12974,
+      "sha256": "e6c696598628b66346c86f5ad892bc6bb1d262dfb82da418602309e0886638ac"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/camera-source.mjs",
+      "bytes": 2303,
+      "sha256": "f2e11c54bce3da92bc10fc397e4b135d2d5633ac02e512582ac6b0a6cd4a15bc"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/commissioning-sequence-ledger.mjs",
+      "bytes": 8511,
+      "sha256": "ef9144236c60c2d1998d504427462451389d48ab3477068686b8e8490114d822"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/controller.mjs",
+      "bytes": 23890,
+      "sha256": "334b1783f0cae454bc36f7babdab71c3da912c7989754add217a19be23d05af9"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/current-wave-start.mjs",
+      "bytes": 7477,
+      "sha256": "58e7e8daed09bc9375a79d7323b7b6f8a9462a993b0d2ef2a9a4ea5e4651c074"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/dramatic-wave.mjs",
+      "bytes": 28691,
+      "sha256": "e0465d6226299792d25d84b32f796d90c758750ce47f83f00a393d6e7c306f31"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/dynamic-moves.mjs",
+      "bytes": 7461,
+      "sha256": "229c29462a4a7c592430628e2ccf4638afd5f587a156403c384fc72c5e2d365f"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/dynamic-physical-executor.mjs",
+      "bytes": 26933,
+      "sha256": "6c2be63dfce3b557adffd0b1cfda41ac6eb31ed7ea312dbc4f9e34683b823f11"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/dynamic-physical-program.mjs",
+      "bytes": 10704,
+      "sha256": "92d871244b941652484f201a8ac4abfb266b9971904a5fd078e896c5119c15ec"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/elbow-feedforward-geometry.mjs",
+      "bytes": 3692,
+      "sha256": "c01df90a3eee5c5f36c6224ccc4cd9fb81ae44606f87fe3d232faf191286b958"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/elbow-feedforward-qualification.mjs",
+      "bytes": 16594,
+      "sha256": "b9e56ddfceba66119a2b63839dc7ebc4c4c8c0a4b457a7470907745286ea524a"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/elbow-stationary-recovery.mjs",
+      "bytes": 9098,
+      "sha256": "de4ceb067352cbc4f7f14a863528c8c31b4e31c538105f88e77cc414cc52516a"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/experiment-analysis.mjs",
+      "bytes": 2949,
+      "sha256": "c517e8c2b8302f2227cef60917eff1561a2b6b999c80759030ef03239d7b8fe0"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/experiment-statistics.mjs",
+      "bytes": 3621,
+      "sha256": "bd35b23b75c396ff6c898a734f45cd37ebf9f47da775274ec9daf35e9e1ea2b3"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/expressive-elbow-candidate.mjs",
+      "bytes": 3013,
+      "sha256": "913fc2c65a16a0cac9e212acbcac2251db2f896f76e6239d446d4df2c601e13c"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/factory-manual-calibration.mjs",
+      "bytes": 6358,
+      "sha256": "aed8b5524e482e7700bb3593db5ccacc3f6ffd57d09c31836ace927b2d5c4561"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/feedback-completion.mjs",
+      "bytes": 3324,
+      "sha256": "9f1d3a66ae49d64c446ed09cffc216e8f7a5b9590f0bc73eb0b3553a21ef29d8"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/finite-base-wave.mjs",
+      "bytes": 29820,
+      "sha256": "66783c05b5b09b01fe965d21d532071dcedf93239345c59f7c2e194e4126cd94"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/finite-elbow-gesture.mjs",
+      "bytes": 19313,
+      "sha256": "19da534d89ff3d4a08bcb696407cf79adf6731397f778e6a7521c45b85720fab"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/finite-elbow-repeat.mjs",
+      "bytes": 11362,
+      "sha256": "4d6e84562e4fd5a71ba73802e32cc626378d2e47fccbeea34ec97adad7f05cc2"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/guarded-elbow-trajectory.mjs",
+      "bytes": 1833,
+      "sha256": "c410f1afb15eb04c76d0954ef598ce30a6f3584d453233117280188b9aed5347"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/guarded-trajectory-executor.mjs",
+      "bytes": 2424,
+      "sha256": "48354f3f25137f35435908c4a65d0bd87dba64ddc4b0ed0c47e9cbf6589e836f"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/hardware-bridge-admission.mjs",
+      "bytes": 6790,
+      "sha256": "7494102de1c91005550db82130ad7f3852e8374c7bbddf8d65650477cba4a21d"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/hardware-bridge-feedback.mjs",
+      "bytes": 6978,
+      "sha256": "ec0f178f85add553933236b9353b8ddb40019dab59b02e3a5f35c74a304c75ae"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/hardware-physical-program.mjs",
+      "bytes": 3224,
+      "sha256": "85c0ad432dea79ebf63967e9b02ebdecd8e928d4952742f6e92e541eb3440212"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/hardware-pilot-control.mjs",
+      "bytes": 5528,
+      "sha256": "ca849fc069503fd636e24e703fa9ec061cb2700cf645ac6cb9a9f303a6cca1b2"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/kinematics.mjs",
+      "bytes": 4286,
+      "sha256": "1b08f417684ceb245eed965407a442cdd6752143f6bd74405b809aecbcdd7c2e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/lazy-pilot.mjs",
+      "bytes": 457,
+      "sha256": "462675c7448f60bc8e1a5d1c607438e439fca98c8c412d3ebac3756d8c86d255"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/manual-crash-recovery.mjs",
+      "bytes": 6920,
+      "sha256": "846ac7ca2cd027f816b7310223396787c1461c80bf5f54acd51d35e6ea69b1eb"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/manual-joints-review.mjs",
+      "bytes": 12568,
+      "sha256": "77dcf6759d4f29071af12b7fc1843c5648120f8e1f29b921907066734a28730d"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/manual-joints.mjs",
+      "bytes": 31700,
+      "sha256": "c2a94ca58c39bbb3053856f25673571668a189edc87ab45760fb115d1f6c9892"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/manual-pose-recovery.mjs",
+      "bytes": 52985,
+      "sha256": "5d629a827a0cb85800420fc3787d57658757d032170055ff74e838ccc9f4cef0"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/manual-restart-qualification.mjs",
+      "bytes": 4917,
+      "sha256": "c405eef134cd3416bba22c887017180d2d362c25703e8ff061993e69cdbefa48"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/manual-settled-exit.mjs",
+      "bytes": 1778,
+      "sha256": "4793538a981620e5dddc68dd01726cb34968a8808cc8be25bc122820173f3aa5"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/motion-config.mjs",
+      "bytes": 21947,
+      "sha256": "e1cc86066ad8586a89b11563e85d7fcccda769b0b442712f837489fc22240771"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/movement-history-snapshot.mjs",
+      "bytes": 9378,
+      "sha256": "92f88e696dbfa75684565a99a2b9f92c8d9a4ceca7274434d5e2e7ffde22e252"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/movement.mjs",
+      "bytes": 89558,
+      "sha256": "ff2718b909593235e743172d852bb71196d1a2c73989b740a13db343e0112c67"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/operating-envelope.mjs",
+      "bytes": 1755,
+      "sha256": "41f1c3a5cd91e438f4e6921d1270196f5406bd9c163f8b49c0a379ee8abb1bf1"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/other-joint-plan.mjs",
+      "bytes": 16615,
+      "sha256": "efb32b16deea3feee32e8fa808673474b4e0230e9d61f114fb2bb2099976ab2f"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/ownership.mjs",
+      "bytes": 1505,
+      "sha256": "5d9f099247f0b2a0608804edd4bb94b239acab2b83b235745c6e8bd1d62f2be5"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/pilot-commands.mjs",
+      "bytes": 2751,
+      "sha256": "88cbadc6b1d8983d98b05a47a8cc6ed536cfa533d36a88d41e6057da656413f2"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/pilot-control.mjs",
+      "bytes": 20458,
+      "sha256": "09d1bf4091c0323bb1e9ddaf5b09c612f072d2d4495e14c37c3da084834aca04"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/pilot-owner-observer.mjs",
+      "bytes": 4240,
+      "sha256": "8c4f92675c0406adc155c82601c46cc829160acd9655f1ca6d482a42f870cd00"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/pilot-owner-trace.mjs",
+      "bytes": 3524,
+      "sha256": "987d6b688de534b8ea6627318b14c8f7056893c4ae426e511882a1decb6bdffc"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/poses.mjs",
+      "bytes": 4270,
+      "sha256": "2ba9b3d00a4a6e533b620757420157bfe8a51148f5268b7d1c4fc481866bcff1"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/preset-library.mjs",
+      "bytes": 9041,
+      "sha256": "834f05f76312371056cb265496091f05254c384dc966b5e8e2337f631c9467d0"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/preset-server.mjs",
+      "bytes": 6264,
+      "sha256": "aafa3619c2858d4dbbbdc90219f05d55c3f0c03540bef5d04865a51ee5a30f45"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/reference-pose-return-control.mjs",
+      "bytes": 4686,
+      "sha256": "1883099930c8f676f5fe69529fe49d0150e47cb42fcf89374ab49c2bec656235"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/reference-pose-return-executor.mjs",
+      "bytes": 14933,
+      "sha256": "98addb435ec4839fdaa1a6551b8e017c829b38ec6425e0f9762f8956b6322270"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/reference-pose-return.mjs",
+      "bytes": 20899,
+      "sha256": "d3e30a6da3762eea999877a8d5214691df89bfd33a53895dc03e33210157905c"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/reference-pose-start.mjs",
+      "bytes": 5578,
+      "sha256": "73d86eb4f502d311eac430960650b7feb30f367d40c25cd61f997d4e7205d7dd"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/request-policy.mjs",
+      "bytes": 2272,
+      "sha256": "ccc897ec0c9654a9d50f00e7cdd68c5300f114f3c1571986104366e78e6d0f7e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/reviewed-sequence-runner.mjs",
+      "bytes": 4325,
+      "sha256": "307d52b664059826773fe3f158ac46b27bbb0cf6df917ec0018ca110188e641b"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/routine-motion-consent.mjs",
+      "bytes": 5587,
+      "sha256": "4488b91beb999381f32831ae9d77465d571b2f421981eac96b605be06f8d9743"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/safety.mjs",
+      "bytes": 5803,
+      "sha256": "225e876df38f23938e9fc16a8efa6eab62c0f9307b8aa1538fca99b642a1774c"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/server.mjs",
+      "bytes": 24966,
+      "sha256": "a52748f8b28d9a7d1ca14db0068280b49c10b392d6f27b65a3f40fb46fa0d23f"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/session-authority.mjs",
+      "bytes": 6034,
+      "sha256": "fe0dd9d963278d587df205b56cd90c18ac5e14a605a45173b946972bb1272a22"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/shoulder-clearance.mjs",
+      "bytes": 20092,
+      "sha256": "b2d91b3651587f31f0f7bdd64c076041a645fc34ff87d32892fcf0dca809d60f"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/shoulder-pair-feedback.mjs",
+      "bytes": 1860,
+      "sha256": "e038400dc429b3160cf7ff0c8e3c0476bb6858a6430b947fd14a8dc21576540c"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/simulator.mjs",
+      "bytes": 7771,
+      "sha256": "b834e5cbc17bd669d5e66c32828907d9881c94eebfcc45c15df103cdcc9fc2fc"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/status-view.mjs",
+      "bytes": 4776,
+      "sha256": "6d23f1b7b26714685eb118a73fa63246d2c20ed12bd9510e8639023322658175"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/studio-repair.mjs",
+      "bytes": 4430,
+      "sha256": "67a5fd5a63a49e9e95df02ba1ce3494a592f4b4a14de13dfd97098db3b0d2980"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/sync-usage-worker.mjs",
+      "bytes": 1959,
+      "sha256": "21c3e6d3f4f55953938363e5a3f0da813cfce5f20eb28dff111e9bf86182eaef"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/sync-usage.mjs",
+      "bytes": 1757,
+      "sha256": "c7661b941bb88f1f00520494c13e6ad27270f2b7315503d1117da27f1318524e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/sync-view.mjs",
+      "bytes": 6957,
+      "sha256": "00cb3b1b505f8d5111239eefe5e515d961c8909fff49c7833ad2b327503efd4b"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/task-runner.mjs",
+      "bytes": 6380,
+      "sha256": "e46bb6a9c34850bf36feb5d2e011c3f81a9e24d38f43508c0b50b7770ee770ab"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/telemetry.mjs",
+      "bytes": 7455,
+      "sha256": "1a82798afbaf4ae7babece1ab162c8485b934bef820bd536d21038322d14557c"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/training-envelope.mjs",
+      "bytes": 8287,
+      "sha256": "b73ce2ab334be090892d9390e1e17028881c5f45ef035dec840213e1f86ce6d8"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/training-plan.mjs",
+      "bytes": 3984,
+      "sha256": "9ae34b425ed41cc3c4117d4a55d91d166b9c42b2637eca47bf04881c82ed82ff"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/transport.mjs",
+      "bytes": 16859,
+      "sha256": "9e2158e7b9a500cc9650db636aea40ee13afb2174f1d8cd257794bc03ba1992c"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/visible-base-wave.mjs",
+      "bytes": 15541,
+      "sha256": "0bd264134a79b2177a6adb8185d74803488d896ae1a5c294e0a5388a27f83fcb"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/visible-elbow-plan.mjs",
+      "bytes": 4038,
+      "sha256": "f5f0bd8269329ef57edf7bc866899b3e8ec32ffa9a65a821711ef2c62a33934f"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/wave-stationary-start.mjs",
+      "bytes": 16487,
+      "sha256": "30888c943a033408f5e6e627878272285bc28e2ec449003112deaf227932fe8a"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/z-lift-actuators.mjs",
+      "bytes": 3169,
+      "sha256": "10bd2e27df63353067a3fd213b4ec3609162ddfa87f9c46587b10a5d1d2e8b29"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/z-lift-commissioning.mjs",
+      "bytes": 18357,
+      "sha256": "778b62a0e69c71851017351437d0b91c834554a7a6005fc451aa0ae687c6333e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "src/z-lift-plan.mjs",
+      "bytes": 5365,
+      "sha256": "f6dcbec86ac4dc7262490481f1ccb9faf4d4e358137df2c88f066d1aae88aec8"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "test/joint-preview-bridge.test.mjs",
+      "bytes": 3253,
+      "sha256": "516595c34bfff40a8e96677e35566bc0eec3cb02ffa948ff0fa22ad850bcb178"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "test/manual-console-session.test.mjs",
+      "bytes": 20033,
+      "sha256": "e002586275b29d495ef7bbae90296b2a64c33f075f9cfb9ace1a8eb9da77b95a"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "test/point-map-capture.test.mjs",
+      "bytes": 5984,
+      "sha256": "1af011ccfd8b707168819fb53049b1f5fb1d1e972f79ec2d4a814184dc50c5e6"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "test/preset-studio.test.mjs",
+      "bytes": 11356,
+      "sha256": "b75d43d6aefce2181c18363298d8071c4598f80103fc5f0477fc3f0d03499cff"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "test/studio-embedding.test.mjs",
+      "bytes": 2655,
+      "sha256": "a4d94febdfb7e5080cf756bca38d4830609529b4864488a97e15fc78cdaabaff"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "test/studio-workspace.test.mjs",
+      "bytes": 1829,
+      "sha256": "e4388f4be70876d05cbe6875251439060f5f5c7033dada707463f6a95c2d8e11"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/dynamic-moves-rehearsal.mjs",
+      "bytes": 2226,
+      "sha256": "eb3581c92ea2eebbeefa953adb11f46a618d56961ef60052467c632e31195006"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/manual-observation-client.mjs",
+      "bytes": 24292,
+      "sha256": "a42d3859f31fd766f4949254cdd1e4dbf583d7f8b57f60bb0f0462174116267e"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/manual-perception-client.mjs",
+      "bytes": 4248,
+      "sha256": "aa70c03f4f8b7f442af3789b78559a6eff954203dee8056dd32fd1bab4095b8b"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/movement-actions.mjs",
+      "bytes": 1801,
+      "sha256": "533dbacafd9988da98d0139fa58533324957bb8ab9109398e3619f851ce9e1e9"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/movement.mjs",
+      "bytes": 12513,
+      "sha256": "67472ec1164f1fcc5bbbeb9d856945057cc1a0cca24f220fc85f9fd20bab8d67"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/perception/compare-camera-frames.py",
+      "bytes": 6882,
+      "sha256": "9067182289b7e989f4c90a3c767f8ce29177b0b63eedadd12f7e336d2ef81066"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/perception/live-perception-observer.py",
+      "bytes": 17407,
+      "sha256": "f9732c1ae428776adc820bf81241c05c964f7c492531b14751eb788f32579271"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/pilot-camera-proof.mjs",
+      "bytes": 8622,
+      "sha256": "d6e1a90ba9ad3e006f3c70844cb2bac64293efe8b624b0e477879fa869ec5fc3"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/pilot-client.mjs",
+      "bytes": 11426,
+      "sha256": "3e60d4bcfbeacec51f193d80d53e20ef1200d3c7e19cb21dba5cfaa6966c87d5"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/prepare-wave-now.mjs",
+      "bytes": 26554,
+      "sha256": "0f93d9d5e64f928c13c07551801f25ef9702105cea06c88f44fdaca3d9a311fa"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/robot.mjs",
+      "bytes": 6613,
+      "sha256": "f95777031ae18ab7c437e3506bd90adbf3487606218dd69f85fcc331831e115d"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/studio-connection.mjs",
+      "bytes": 1145,
+      "sha256": "45046cc340d0e78f972b51444f26a9e37e487680738deb2af69bec4fe537afd5"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/studio.mjs",
+      "bytes": 6417,
+      "sha256": "9a20bd2f7cd3626060d991b45e9f35434781d821f573a5b1c684822d8fba5cb9"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/wave-now-client.mjs",
+      "bytes": 5371,
+      "sha256": "2c987e55ee0daf9e27898587f282fcaac2dfc03bb56c58d7560045af97301324"
+    },
+    {
+      "component": "waveshare-robotic-arm",
+      "path": "tools/webcam.py",
+      "bytes": 8418,
+      "sha256": "96deda453a22017435141be94c982527f18c1a64a5db0dc1b3c423eb78b34ef5"
+    }
+  ]
+}
