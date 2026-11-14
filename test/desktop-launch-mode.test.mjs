@@ -9,7 +9,7 @@ import {EventEmitter} from 'node:events';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),source=await fs.readFile(new URL('../desktop/main.cjs',import.meta.url),'utf8');
 async function shell(learning,extra=[]){
- const calls={supervisors:[],workspaces:[],windows:[],menus:null,errors:[],events:[],quit:false},app=new EventEmitter();Object.assign(app,{isPackaged:false,setName(){},setAppUserModelId(){},setPath(){},getPath:()=>'/test/appdata',getVersion:()=> '0.5.0',requestSingleInstanceLock:()=>true,whenReady:()=>Promise.resolve(),quit(){calls.quit=true;}});
+ const calls={supervisors:[],workspaces:[],windows:[],menus:null,errors:[],events:[],identity:{},quit:false},app=new EventEmitter();Object.assign(app,{isPackaged:false,setName(value){calls.identity.name=value;},setAppUserModelId(value){calls.identity.id=value;},setPath(key,value){calls.identity[key]=value;},getPath:()=>'/test/appdata',getVersion:()=> '0.5.0',requestSingleInstanceLock:()=>true,whenReady:()=>Promise.resolve(),quit(){calls.quit=true;}});
  class Contents extends EventEmitter{constructor(){super();this.session={setPermissionRequestHandler(){}};this.sent=[];this.mainFrame={origin:'',url:''};this.url='';this.reloads=0;}setWindowOpenHandler(){}send(...args){this.sent.push(args);if(args[0]==='odradek:prepare-learning-close')calls.events.push('prepare');}isLoadingMainFrame(){return !!this.loading;}getURL(){return this.url;}isDestroyed(){return false;}reload(){this.reloads++;}reloadIgnoringCache(){this.reloads++;}}
  class Window extends EventEmitter{constructor(options){super();this.options=options;this.webContents=new Contents();this.urls=[];calls.windows.push(this);}async loadURL(url){this.urls.push(url);this.webContents.url=url;this.webContents.mainFrame.url=url;this.webContents.mainFrame.origin=new URL(url).origin;}show(){}focus(){}isMinimized(){return false;}setTitle(){}}
  class Supervisor{constructor(options){this.options=options;calls.supervisors.push(this);}async start(){this.started=true;calls.events.push('start');}async stop(){this.stopped=true;calls.events.push('stop');}}
@@ -57,3 +57,5 @@ test('iteration-ghost launch and restart remain cold offline with no Studio dock
  await calls.menus[0].submenu.find(row=>row.label==='Restart offline viewer').click();
  assert.match(calls.windows[0].urls.at(-1),/offline-learning=1&iteration-ghosts=1$/);assert.equal(calls.errors.length,0);
 });
+
+test('Studio owns a separate name, Windows identity and user data directory',async()=>{const {calls,dispose}=await shell(true);assert.equal(calls.identity.name,'Odradek Studio');assert.equal(calls.identity.id,'com.odradek.studio');assert.equal(calls.identity.userData,path.join('/test/appdata','odradek-studio'));dispose();});

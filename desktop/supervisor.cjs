@@ -16,7 +16,7 @@ async function inspectServices(){
  }));
  if(checks.every(c=>c==='ready'))return 'reuse';
  if(checks.every(c=>c==='absent'))return 'start';
- throw Error('Only part of the local Studio is running, or a required port is occupied. Close its own launcher first, then reopen Odradek Lab. The app has left those services untouched.');
+ throw Error('Only part of the local Studio is running, or a required port is occupied. Close its own launcher first, then reopen Odradek Studio. The app has left those services untouched.');
 }
 class Supervisor{
  constructor({resources,dataRoot,packaged,version='0.2.0',offlineLearning=false}){Object.assign(this,{resources,dataRoot,packaged,version,offlineLearning:!!offlineLearning,child:null,reused:false,ready:false,stopPromise:null});}

@@ -98,7 +98,7 @@ test('Learning Lab trains, pauses to IndexedDB, restores in a new worker, and va
   panel.open();assert.equal(action('resume').disabled,false);action('resume').click();
   await until(()=>panel.run.status==='complete'&&!action('export').disabled||!root.querySelector('.learning-error').hidden,'worker resume to completion');
   assert.equal(panel.run.status,'complete');assert.equal(panel.run.history.at(-1).generation,2);
-  await until(()=>!panel.dirty,'completed checkpoint persistence before importing another run');
+  await until(()=>!panel.dirty&&!field('import').disabled,'completed checkpoint persistence and enabled import control');
   action('export').click();assert.ok(exportedBlob,'export action should create a JSON Blob: '+root.querySelector('.learning-error').textContent);
   const {parseLearningRun}=await server.ssrLoadModule(path.join(directory,'src/replica/learning/run.js'));
   const exported=parseLearningRun(await exportedBlob.text());assert.equal(exported.id,runId);assert.equal(exported.status,'complete');

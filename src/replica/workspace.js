@@ -6,7 +6,7 @@ export function mountWorkspace({root,notify,initialMode='manual'}){
  if(!bridge)return; // The web/embedded replica remains a portable preview.
  const shell=document.createElement('div');shell.className='workspace-shell';
  root.before(shell);shell.append(root);
- const nav=document.createElement('nav');nav.className='workspace-nav panel';nav.setAttribute('aria-label','Odradek Lab workspace');
+ const nav=document.createElement('nav');nav.className='workspace-nav panel';nav.setAttribute('aria-label','Odradek Studio workspace');
  nav.setAttribute('role','tablist');root.id='simulation-workspace';
  nav.innerHTML=`<span class="workspace-brand">ODRADEK<small>CONTROL TERMINAL</small></span>${catalog.tabs.map(({id,label},i)=>`<button role="tab" data-workspace="${id}" aria-selected="false" aria-pressed="false" aria-controls="${id==='preview'?'simulation':'operator'}-workspace"><small>0${i+1}</small>${label}</button>`).join('')}`;
  shell.prepend(nav);
