@@ -6,6 +6,8 @@ replica, precise preview controls and an offline stylus-learning simulator.
 **0.5.5 preview** brings the finished 0.5.4 app features into a curated Studio
 distribution. Research records and development history are maintained separately.
 
+![Studio Learning Lab with synchronized iteration ghosts](docs/images/learning-lab-ghosts.png)
+
 ## Install
 
 Download the Windows x64 installer or portable ZIP from
